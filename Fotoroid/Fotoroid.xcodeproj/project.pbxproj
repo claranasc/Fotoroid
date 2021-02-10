@@ -103,8 +103,8 @@
 				25ED3E9F25D4759E0048F4F0 /* SceneDelegate.swift */,
 				25ED3EA125D4759E0048F4F0 /* ViewController.swift */,
 				25ED3EA325D4759E0048F4F0 /* Main.storyboard */,
-				25ED3EA625D475A10048F4F0 /* Assets.xcassets */,
 				25ED3EA825D475A10048F4F0 /* LaunchScreen.storyboard */,
+				25ED3EA625D475A10048F4F0 /* Assets.xcassets */,
 				25ED3EAB25D475A10048F4F0 /* Info.plist */,
 			);
 			path = Fotoroid;
@@ -446,7 +446,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.claranascimento.Fotoroid;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -465,7 +465,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.claranascimento.Fotoroid;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
