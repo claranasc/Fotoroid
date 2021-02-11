@@ -24,6 +24,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dAD-kT-09m">
                                 <rect key="frame" x="107" y="325" width="200" height="200"/>
                                 <state key="normal" image="camera"/>
+                                <connections>
+                                    <action selector="selectSource:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dVb-py-u3o"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tire/Escolha a sua foto" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tx9-GX-aZD">
                                 <rect key="frame" x="97" y="540" width="220.5" height="26.5"/>
@@ -94,13 +97,31 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2OS-Rt-pix">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Ame-IU-1Jq">
+                                        <rect key="frame" x="188.5" y="385.5" width="37" height="37"/>
+                                        <color key="color" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Ame-IU-1Jq" firstAttribute="centerX" secondItem="2OS-Rt-pix" secondAttribute="centerX" id="4P0-e1-WQe"/>
+                                    <constraint firstItem="Ame-IU-1Jq" firstAttribute="centerY" secondItem="2OS-Rt-pix" secondAttribute="centerY" id="fjo-Fo-Xzj"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="D4h-1n-bOH"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="EUD-Is-JIb" firstAttribute="top" secondItem="6u2-Ve-NTm" secondAttribute="bottom" constant="30" id="1z9-ij-EwV"/>
+                            <constraint firstAttribute="bottom" secondItem="2OS-Rt-pix" secondAttribute="bottom" id="Kif-Tf-WbF"/>
                             <constraint firstItem="6u2-Ve-NTm" firstAttribute="top" secondItem="D4h-1n-bOH" secondAttribute="top" constant="30" id="P0i-vV-fTE"/>
                             <constraint firstItem="D4h-1n-bOH" firstAttribute="bottom" secondItem="EUD-Is-JIb" secondAttribute="bottom" constant="20" id="dYM-N9-4CD"/>
+                            <constraint firstItem="2OS-Rt-pix" firstAttribute="top" secondItem="D4h-1n-bOH" secondAttribute="top" id="eU8-iu-Xse"/>
+                            <constraint firstItem="2OS-Rt-pix" firstAttribute="trailing" secondItem="D4h-1n-bOH" secondAttribute="trailing" id="gpq-fl-cNW"/>
+                            <constraint firstItem="2OS-Rt-pix" firstAttribute="leading" secondItem="D4h-1n-bOH" secondAttribute="leading" id="hft-xK-UVL"/>
                             <constraint firstItem="EUD-Is-JIb" firstAttribute="leading" secondItem="D4h-1n-bOH" secondAttribute="leading" constant="20" id="qJ0-R9-iVY"/>
                             <constraint firstItem="6u2-Ve-NTm" firstAttribute="leading" secondItem="D4h-1n-bOH" secondAttribute="leading" constant="20" id="tpm-xI-yUl"/>
                             <constraint firstItem="D4h-1n-bOH" firstAttribute="trailing" secondItem="EUD-Is-JIb" secondAttribute="trailing" constant="20" id="ulC-iQ-Mdu"/>
@@ -114,6 +135,11 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="collectionView" destination="EUD-Is-JIb" id="zmG-29-iZG"/>
+                        <outlet property="ivPhoto" destination="6u2-Ve-NTm" id="QDz-JK-Wbb"/>
+                        <outlet property="viLoading" destination="2OS-Rt-pix" id="x57-vx-hZR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L5y-7L-2n7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -141,6 +167,9 @@
                                 <state key="normal" title="Salvar no álbum">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="save:" destination="SUw-en-nXx" eventType="touchUpInside" id="o3G-Xu-Ema"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WXz-xk-T8q">
                                 <rect key="frame" x="24" y="774" width="366" height="44"/>
@@ -152,6 +181,9 @@
                                 <state key="normal" title="Começar novamente">
                                     <color key="titleColor" red="0.95686274509803915" green="0.40392156862745099" blue="0.25490196078431371" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="restart:" destination="SUw-en-nXx" eventType="touchUpInside" id="01a-9h-5xW"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="JZm-os-nMI">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -174,6 +206,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="1Y4-zB-CeH"/>
+                    <connections>
+                        <outlet property="ivPhoto" destination="xBV-15-HNW" id="mwF-77-m9Q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wqe-a4-fJM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
