@@ -46,8 +46,35 @@ class ViewController: UIViewController {
     }
     
     func selectPicture(sourceType: UIImagePickerController.SourceType) {
-        
+        let imagePicker = UIImagePickerController()
+        imagePicker.sourceType = sourceType
+        imagePicker.delegate = self
+        present(imagePicker, animated: true, completion: nil)
     }
     
+}
+
+extension ViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if  let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            let originalWidth = image.size.width
+            let aspectRatio = originalWidth / image.size.height
+            var smallSize: CGSize
+            if aspectRatio > 1 {
+                smallSize = CGSize(width: 1000, height: 1000/aspectRatio)
+            } else {
+                smallSize = CGSize(width: 1000*aspectRatio, height: 1000)
+            }
+            
+            UIGraphicsBeginImageContext(smallSize)
+            image.draw(in: CGRect(x: 0, y: 0, width: smallSize.width, height: smallSize.height))
+            let smallImage = UIGraphicsGetImageFromCurrentImageContext()
+            UIGraphicsEndImageContext()
+            
+            dismiss(animated: true, completion: {
+                self.performSegue(withIdentifier: "effectSegue", sender: smallImage)
+            })
+        }
+    }
 }
 

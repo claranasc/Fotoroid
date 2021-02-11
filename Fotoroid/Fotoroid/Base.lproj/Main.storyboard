@@ -46,7 +46,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="nxD-9R-7Vf"/>
                     <connections>
-                        <segue destination="aBD-ZM-hVR" kind="show" id="lbs-Tn-KnL"/>
+                        <segue destination="aBD-ZM-hVR" kind="show" identifier="effectSegue" id="lbs-Tn-KnL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
