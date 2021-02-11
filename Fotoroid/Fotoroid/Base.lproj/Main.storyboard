@@ -53,7 +53,7 @@
         <!--Efeitos-->
         <scene sceneID="clY-bo-Gnu">
             <objects>
-                <viewController id="aBD-ZM-hVR" sceneMemberID="viewController">
+                <viewController id="aBD-ZM-hVR" customClass="EffectsViewController" customModule="Fotoroid" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DgP-ic-9jq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -119,10 +119,10 @@
             </objects>
             <point key="canvasLocation" x="2339.130434782609" y="61.607142857142854"/>
         </scene>
-        <!--View Controller-->
+        <!--Final View Controller-->
         <scene sceneID="noK-hX-Hyf">
             <objects>
-                <viewController id="SUw-en-nXx" sceneMemberID="viewController">
+                <viewController id="SUw-en-nXx" customClass="FinalViewController" customModule="Fotoroid" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aUx-mG-qmd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
