@@ -20,8 +20,6 @@ class FinalViewController: UIViewController {
         navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
-    
-    
     @IBAction func save(_ sender: UIButton) {
     }
     

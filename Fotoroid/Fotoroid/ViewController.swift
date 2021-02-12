@@ -20,10 +20,9 @@ class ViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let vc = segue.destination as! EffectsViewController
-        vc.image = sender as! UIImage
+        vc.image = (sender as! UIImage)
     }
     
-
     @IBAction func selectSource(_ sender: UIButton) {
         let alert = UIAlertController(title: "Selecionar foto", message: "De onde você quer escolher a sua foto?", preferredStyle: .actionSheet)
         
