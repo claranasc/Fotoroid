@@ -13,16 +13,11 @@ class EffectsViewController: UIViewController {
     @IBOutlet weak var viLoading: UIView!
     @IBOutlet weak var ivPhoto: UIImageView!
     
-    
-    
-    
+    var image: UIImage!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        ivPhoto.image = image
 
-        // Do any additional setup after loading the view.
     }
-    
-
-
 }
