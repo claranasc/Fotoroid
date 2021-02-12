@@ -10,6 +10,7 @@
 		252B8DAF25D7291C00B32909 /* FilterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252B8DAE25D7291C00B32909 /* FilterManager.swift */; };
 		2596EC2D25D5E69300EDB8D8 /* EffectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2596EC2C25D5E69300EDB8D8 /* EffectsViewController.swift */; };
 		2596EC3525D5E71000EDB8D8 /* FinalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2596EC3425D5E71000EDB8D8 /* FinalViewController.swift */; };
+		25B716A425D73B5600FC7C3A /* EffectCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B716A325D73B5600FC7C3A /* EffectCollectionViewCell.swift */; };
 		25ED3E9E25D4759E0048F4F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25ED3E9D25D4759E0048F4F0 /* AppDelegate.swift */; };
 		25ED3EA025D4759E0048F4F0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25ED3E9F25D4759E0048F4F0 /* SceneDelegate.swift */; };
 		25ED3EA225D4759E0048F4F0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25ED3EA125D4759E0048F4F0 /* ViewController.swift */; };
@@ -41,6 +42,7 @@
 		252B8DAE25D7291C00B32909 /* FilterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterManager.swift; sourceTree = "<group>"; };
 		2596EC2C25D5E69300EDB8D8 /* EffectsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EffectsViewController.swift; sourceTree = "<group>"; };
 		2596EC3425D5E71000EDB8D8 /* FinalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalViewController.swift; sourceTree = "<group>"; };
+		25B716A325D73B5600FC7C3A /* EffectCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EffectCollectionViewCell.swift; sourceTree = "<group>"; };
 		25ED3E9A25D4759E0048F4F0 /* Fotoroid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fotoroid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		25ED3E9D25D4759E0048F4F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		25ED3E9F25D4759E0048F4F0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				25ED3E9F25D4759E0048F4F0 /* SceneDelegate.swift */,
 				25ED3EA125D4759E0048F4F0 /* ViewController.swift */,
 				2596EC2C25D5E69300EDB8D8 /* EffectsViewController.swift */,
+				25B716A325D73B5600FC7C3A /* EffectCollectionViewCell.swift */,
 				2596EC3425D5E71000EDB8D8 /* FinalViewController.swift */,
 				252B8DAE25D7291C00B32909 /* FilterManager.swift */,
 				25ED3EA325D4759E0048F4F0 /* Main.storyboard */,
@@ -273,6 +276,7 @@
 				25ED3E9E25D4759E0048F4F0 /* AppDelegate.swift in Sources */,
 				25ED3EA025D4759E0048F4F0 /* SceneDelegate.swift in Sources */,
 				252B8DAF25D7291C00B32909 /* FilterManager.swift in Sources */,
+				25B716A425D73B5600FC7C3A /* EffectCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
