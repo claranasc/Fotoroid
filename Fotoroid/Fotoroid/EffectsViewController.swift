@@ -19,6 +19,10 @@ class EffectsViewController: UIViewController {
         let filterManager = FilterManager(image: image)
         return filterManager
     }()
+    
+    let filterImageNames = [
+        "comic", "sepia", "halftone", "crystallize", "vignette", "noir"
+    ]
         
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +33,12 @@ class EffectsViewController: UIViewController {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(false, animated: true)
     }
+    
+    func showLoading(_ show: Bool) {
+        viLoading.isHidden = !show
+        
+    }
+    
 }
 
 extension EffectsViewController: UICollectionViewDataSource, UICollectionViewDelegate {
@@ -42,10 +52,19 @@ extension EffectsViewController: UICollectionViewDataSource, UICollectionViewDel
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! EffectCollectionViewCell
+        
+        cell.ivEffect.image = UIImage(named: filterImageNames[indexPath.row])
         
         return cell
-    
+    }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let type = FilterType(rawValue: indexPath.row) {
+            showLoading(true)
+            let filteredImage = self.filterManager.applyFilter(type: type)
+            self.ivPhoto.image = filteredImage
+            showLoading(false)
+        }
     }
     
 }
