@@ -34,7 +34,7 @@ class EffectsViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        ivPhoto.image = filterManager.applyFilter(type: FilterType(rawValue: 0)!)
+        ivPhoto.image = filterManager.applyFilter(type: FilterType(rawValue: 2)!)
     }
     
 /*
