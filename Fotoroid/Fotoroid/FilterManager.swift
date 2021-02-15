@@ -23,18 +23,19 @@ class FilterManager {
     let filterNames = [
         "CIComicEffect",
         "CISepiaTone",
-        "CICMYHalfTone",
+        "CICMYHalftone",
         "CICrystallize",
-        "CIVignettte",
+        "CIVignette",
         "CIPhotoEffectNoir"
     ]
+    
     init(image: UIImage) {
         self.originalImage = image
     }
     
     func applyFilter(type: FilterType) -> UIImage {
-        let ciImage = CIImage(image: originalImage)!
-        let filter = CIFilter(name: filterNames[type.hashValue])!
+        let ciImage = CIImage(image: originalImage)
+        let filter = CIFilter(name: filterNames[type.rawValue])!
         filter.setValue(ciImage, forKey: kCIInputImageKey)
         switch type {
             case .comic:
@@ -55,5 +56,4 @@ class FilterManager {
         let cgImage = context.createCGImage(filteredImage, from: filteredImage.extent)
         return UIImage(cgImage: cgImage!)
     }
-    
 }

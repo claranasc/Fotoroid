@@ -28,23 +28,29 @@
                                     <action selector="selectSource:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dVb-py-u3o"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tire/Escolha a sua foto" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tx9-GX-aZD">
-                                <rect key="frame" x="97" y="563" width="220.5" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5WI-I2-c8L">
+                                <rect key="frame" x="20" y="563" width="374" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="B6L-pr-zwC"/>
+                                    <constraint firstAttribute="height" constant="40" id="tWW-cp-oNr"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.64330051369863017" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="23"/>
+                                <state key="normal" title="Tire/Escolha a sua foto">
+                                    <color key="titleColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="selectSource:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3up-wu-fHr"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Tx9-GX-aZD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="47u-OO-Ihs"/>
-                            <constraint firstItem="dAD-kT-09m" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Vhs-Gb-GYA"/>
-                            <constraint firstItem="Tx9-GX-aZD" firstAttribute="top" secondItem="dAD-kT-09m" secondAttribute="bottom" constant="15" id="cpq-bx-5ZS"/>
-                            <constraint firstItem="dAD-kT-09m" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="n2C-9h-s0h"/>
+                            <constraint firstItem="dAD-kT-09m" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GKc-PY-04q"/>
+                            <constraint firstItem="5WI-I2-c8L" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OBf-jc-kg0"/>
+                            <constraint firstItem="dAD-kT-09m" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="a4e-ep-F1t"/>
+                            <constraint firstItem="5WI-I2-c8L" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="btJ-XN-Ck6"/>
+                            <constraint firstItem="5WI-I2-c8L" firstAttribute="top" secondItem="dAD-kT-09m" secondAttribute="bottom" constant="15" id="eti-NO-x9Z"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5WI-I2-c8L" secondAttribute="trailing" constant="20" id="txL-pO-tGh"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="nxD-9R-7Vf"/>

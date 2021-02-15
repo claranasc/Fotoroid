@@ -25,6 +25,4 @@ class FinalViewController: UIViewController {
     
     @IBAction func restart(_ sender: UIButton) {
     }
-    
-    
 }
