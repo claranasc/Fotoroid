@@ -22,14 +22,17 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dAD-kT-09m">
-                                <rect key="frame" x="107" y="325" width="200" height="200"/>
+                                <rect key="frame" x="107" y="348" width="200" height="200"/>
                                 <state key="normal" image="camera"/>
                                 <connections>
                                     <action selector="selectSource:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dVb-py-u3o"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tire/Escolha a sua foto" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tx9-GX-aZD">
-                                <rect key="frame" x="97" y="540" width="220.5" height="26.5"/>
+                                <rect key="frame" x="97" y="563" width="220.5" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="B6L-pr-zwC"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.64330051369863017" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -38,20 +41,20 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Tx9-GX-aZD" firstAttribute="top" secondItem="dAD-kT-09m" secondAttribute="bottom" constant="15" id="2Qp-YJ-XNK"/>
-                            <constraint firstItem="dAD-kT-09m" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="-50" id="IV1-kd-DmE"/>
-                            <constraint firstItem="Tx9-GX-aZD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IVn-f8-Sxn"/>
-                            <constraint firstItem="dAD-kT-09m" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="YWV-V8-qbe"/>
+                            <constraint firstItem="Tx9-GX-aZD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="47u-OO-Ihs"/>
+                            <constraint firstItem="dAD-kT-09m" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Vhs-Gb-GYA"/>
+                            <constraint firstItem="Tx9-GX-aZD" firstAttribute="top" secondItem="dAD-kT-09m" secondAttribute="bottom" constant="15" id="cpq-bx-5ZS"/>
+                            <constraint firstItem="dAD-kT-09m" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="n2C-9h-s0h"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="nxD-9R-7Vf"/>
                     <connections>
-                        <segue destination="aBD-ZM-hVR" kind="show" identifier="effectSegue" id="lbs-Tn-KnL"/>
+                        <segue destination="aBD-ZM-hVR" kind="show" identifier="effectsSegue" id="lbs-Tn-KnL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1339" y="62"/>
+            <point key="canvasLocation" x="1337.68115942029" y="61.607142857142854"/>
         </scene>
         <!--Efeitos-->
         <scene sceneID="clY-bo-Gnu">
@@ -65,11 +68,14 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6u2-Ve-NTm">
+                                <rect key="frame" x="20" y="118" width="374" height="624"/>
+                            </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="p49-g9-UWs">
                                 <rect key="frame" x="20" y="762" width="374" height="80"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="Rkm-TZ-Dsx"/>
+                                    <constraint firstAttribute="height" constant="80" id="JUL-vs-fkk"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="D8q-No-ybN">
                                     <size key="itemSize" width="95" height="110"/>
@@ -98,9 +104,6 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6u2-Ve-NTm">
-                                <rect key="frame" x="20" y="118" width="374" height="624"/>
-                            </imageView>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2OS-Rt-pix">
                                 <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                                 <subviews>
@@ -119,17 +122,17 @@
                         <viewLayoutGuide key="safeArea" id="D4h-1n-bOH"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="D4h-1n-bOH" firstAttribute="bottom" secondItem="p49-g9-UWs" secondAttribute="bottom" constant="20" id="3eW-ym-6sk"/>
+                            <constraint firstItem="p49-g9-UWs" firstAttribute="top" secondItem="6u2-Ve-NTm" secondAttribute="bottom" constant="20" id="73V-bJ-n4r"/>
+                            <constraint firstItem="D4h-1n-bOH" firstAttribute="trailing" secondItem="p49-g9-UWs" secondAttribute="trailing" constant="20" id="EdY-5g-Juv"/>
+                            <constraint firstItem="D4h-1n-bOH" firstAttribute="trailing" secondItem="6u2-Ve-NTm" secondAttribute="trailing" constant="20" id="H9h-pQ-2B5"/>
                             <constraint firstAttribute="bottom" secondItem="2OS-Rt-pix" secondAttribute="bottom" id="Kif-Tf-WbF"/>
-                            <constraint firstItem="6u2-Ve-NTm" firstAttribute="top" secondItem="D4h-1n-bOH" secondAttribute="top" constant="30" id="P0i-vV-fTE"/>
-                            <constraint firstItem="p49-g9-UWs" firstAttribute="leading" secondItem="D4h-1n-bOH" secondAttribute="leading" constant="20" id="WD3-Wc-DCF"/>
+                            <constraint firstItem="6u2-Ve-NTm" firstAttribute="top" secondItem="D4h-1n-bOH" secondAttribute="top" constant="30" id="ZCS-P8-oOP"/>
+                            <constraint firstItem="p49-g9-UWs" firstAttribute="leading" secondItem="D4h-1n-bOH" secondAttribute="leading" constant="20" id="ZGz-sP-fEs"/>
+                            <constraint firstItem="6u2-Ve-NTm" firstAttribute="leading" secondItem="D4h-1n-bOH" secondAttribute="leading" constant="20" id="d3q-Xg-IN6"/>
                             <constraint firstItem="2OS-Rt-pix" firstAttribute="top" secondItem="D4h-1n-bOH" secondAttribute="top" id="eU8-iu-Xse"/>
-                            <constraint firstItem="p49-g9-UWs" firstAttribute="top" secondItem="6u2-Ve-NTm" secondAttribute="bottom" constant="20" id="fWS-iQ-Zf7"/>
                             <constraint firstItem="2OS-Rt-pix" firstAttribute="trailing" secondItem="D4h-1n-bOH" secondAttribute="trailing" id="gpq-fl-cNW"/>
                             <constraint firstItem="2OS-Rt-pix" firstAttribute="leading" secondItem="D4h-1n-bOH" secondAttribute="leading" id="hft-xK-UVL"/>
-                            <constraint firstItem="p49-g9-UWs" firstAttribute="bottom" secondItem="D4h-1n-bOH" secondAttribute="bottom" constant="-20" id="jTt-gH-VTj"/>
-                            <constraint firstItem="D4h-1n-bOH" firstAttribute="trailing" secondItem="p49-g9-UWs" secondAttribute="trailing" constant="20" id="p6C-P4-iPJ"/>
-                            <constraint firstItem="6u2-Ve-NTm" firstAttribute="leading" secondItem="D4h-1n-bOH" secondAttribute="leading" constant="20" id="tpm-xI-yUl"/>
-                            <constraint firstItem="D4h-1n-bOH" firstAttribute="trailing" secondItem="6u2-Ve-NTm" secondAttribute="trailing" constant="20" id="xPk-xU-pEG"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Efeitos" id="Ws9-ex-bHl">
@@ -140,6 +143,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="collectionView" destination="p49-g9-UWs" id="9JA-ef-OsK"/>
                         <outlet property="ivPhoto" destination="6u2-Ve-NTm" id="QDz-JK-Wbb"/>
                         <outlet property="viLoading" destination="2OS-Rt-pix" id="x57-vx-hZR"/>
                     </connections>

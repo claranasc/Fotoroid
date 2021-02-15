@@ -15,32 +15,35 @@ class EffectsViewController: UIViewController {
     
     var image: UIImage!
     
-    lazy var filterManager: FilterManager = {
-        let filterManager = FilterManager(image: image)
-        return filterManager
-    }()
     
-    let filterImageNames = [
-        "comic", "sepia", "halftone", "crystallize", "vignette", "noir"
-    ]
+//    lazy var filterManager: FilterManager = {
+//        let filterManager = FilterManager(image: image)
+//        return filterManager
+//    }()
+    
+//    let filterImageNames = [
+//        "comic", "sepia", "halftone", "crystallize", "vignette", "noir"
+//    ]
         
     override func viewDidLoad() {
         super.viewDidLoad()
         ivPhoto.image = image
     }
 
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        navigationController?.setNavigationBarHidden(false, animated: true)
-    }
+//    override func viewWillAppear(_ animated: Bool) {
+//        super.viewWillAppear(animated)
+//        navigationController?.setNavigationBarHidden(false, animated: true)
+//        
+//        ivPhoto.image = filterManager.applyFilter(type: FilterType(rawValue: 0)!)
+//    }
     
-    func showLoading(_ show: Bool) {
-        viLoading.isHidden = !show
-        
-    }
+//    func showLoading(_ show: Bool) {
+//        viLoading.isHidden = !show
+//    }
     
 }
 
+/*
 extension EffectsViewController: UICollectionViewDataSource, UICollectionViewDelegate {
 
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -68,3 +71,5 @@ extension EffectsViewController: UICollectionViewDataSource, UICollectionViewDel
     }
     
 }
+
+*/

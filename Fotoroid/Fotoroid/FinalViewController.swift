@@ -15,10 +15,10 @@ class FinalViewController: UIViewController {
         super.viewDidLoad()
     }
 
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        navigationController?.setNavigationBarHidden(false, animated: true)
-    }
+//    override func viewWillAppear(_ animated: Bool) {
+//        super.viewWillAppear(animated)
+//        navigationController?.setNavigationBarHidden(false, animated: true)
+//    }
     
     @IBAction func save(_ sender: UIButton) {
     }

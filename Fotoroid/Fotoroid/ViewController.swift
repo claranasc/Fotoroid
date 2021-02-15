@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let vc = segue.destination as! EffectsViewController
-        vc.image = (sender as! UIImage)
+        vc.image = sender as! UIImage
     }
     
     @IBAction func selectSource(_ sender: UIButton) {
@@ -34,18 +34,18 @@ class ViewController: UIViewController {
             alert.addAction(cameraAction)
         }
         
-            let libraryAction = UIAlertAction(title: "Biblioteca de fotos", style: .default) { (action) in
-                self.selectPicture(sourceType: .photoLibrary)
-            }
-            alert.addAction(libraryAction)
+        let libraryAction = UIAlertAction(title: "Biblioteca de fotos", style: .default) { (action) in
+            self.selectPicture(sourceType: .photoLibrary)
+        }
+        alert.addAction(libraryAction)
         
-            let photosAction = UIAlertAction(title: "Álbum de fotos", style: .default) { (action) in
-                self.selectPicture(sourceType: .savedPhotosAlbum)
-            }
-            alert.addAction(photosAction)
-        
-            let cancelAction = UIAlertAction(title: "Cancelar", style: .cancel, handler: nil)
-            alert.addAction(cancelAction)
+        let photosAction = UIAlertAction(title: "Álbum de fotos", style: .default) { (action) in
+            self.selectPicture(sourceType: .savedPhotosAlbum)
+        }
+        alert.addAction(photosAction)
+    
+        let cancelAction = UIAlertAction(title: "Cancelar", style: .cancel, handler: nil)
+        alert.addAction(cancelAction)
         
         present(alert, animated: true, completion: nil)
     }
@@ -56,30 +56,32 @@ class ViewController: UIViewController {
         imagePicker.delegate = self
         present(imagePicker, animated: true, completion: nil)
     }
-    
 }
 
 extension ViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+    
         if  let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+        
             let originalWidth = image.size.width
             let aspectRatio = originalWidth / image.size.height
             var smallSize: CGSize
+            
             if aspectRatio > 1 {
                 smallSize = CGSize(width: 1000, height: 1000/aspectRatio)
             } else {
                 smallSize = CGSize(width: 1000*aspectRatio, height: 1000)
             }
-            
+
             UIGraphicsBeginImageContext(smallSize)
             image.draw(in: CGRect(x: 0, y: 0, width: smallSize.width, height: smallSize.height))
             let smallImage = UIGraphicsGetImageFromCurrentImageContext()
             UIGraphicsEndImageContext()
-            
+
             dismiss(animated: true, completion: {
-                self.performSegue(withIdentifier: "effectSegue", sender: smallImage)
+                self.performSegue(withIdentifier: "effectsSegue", sender: smallImage)
             })
         }
     }
 }
-
