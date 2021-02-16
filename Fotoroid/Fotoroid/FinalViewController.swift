@@ -6,19 +6,19 @@
 //
 
 import UIKit
+import Photos
 
 class FinalViewController: UIViewController {
 
     @IBOutlet weak var ivPhoto: UIImageView!
+    var image: UIImage!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        ivPhoto.image = image
+        ivPhoto.layer.borderWidth = 10
+        ivPhoto.layer.borderColor = UIColor.white.cgColor
     }
-
-//    override func viewWillAppear(_ animated: Bool) {
-//        super.viewWillAppear(animated)
-//        navigationController?.setNavigationBarHidden(false, animated: true)
-//    }
     
     @IBAction func save(_ sender: UIButton) {
     }
